@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>CardioInsight</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<style>
+  .loading, .success-message, .error-message {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .loading {
+    color: blue;
+  }
+  .success-message {
+    background-color: green;
+    color: white;
+  }
+  .error-message {
+    color: red;
+  }
+</style>
+<script>
+  function handleSubmit(event) {
+    event.preventDefault(); // Prevent form submission
+
+    // Hide previous messages
+    document.querySelector('.loading').style.display = 'none';
+    document.querySelector('.success-message').style.display = 'none';
+    document.querySelector('.error-message').style.display = 'none';
+
+    // Show loading message
+    document.querySelector('.loading').style.display = 'block';
+
+    // Simulate form submission delay
+    setTimeout(() => {
+      document.querySelector('.loading').style.display = 'none';
+      document.querySelector('.success-message').style.display = 'block';
+    }, 1000);
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('.php-email-form').addEventListener('submit', handleSubmit);
+  });
+</script>
+<body>
+
+ 
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="index.html">CardioInsight.</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#doctors">News</a></li>
+          <li class="dropdown"><a href="#"><span>More</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a class="nav-link scrollto" href="#departments">Cardiovascular Disease Types</a></li>
+              <li><a class="nav-link scrollto" href="#services">Cardiovascular Disease Factors</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <a href="#appointment" class="appointment-btn scrollto"><span class="d-none d-md-inline">Dashboard</a>
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container">
+      <h1>Welcome to CardioInsight</h1>
+      <h2>Your go-to place for discovering insights on heart health, data analysis, and personalized wellness.</h2>
+      <a href="#appointment" class="btn-get-started scrollto">Go to dashboard</a>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-4 d-flex align-items-stretch">
+            <div class="content">
+              <h3>What is cardiovascular disease?</h3>
+              <p>
+                Cardiovascular disease (CVD) is a group of heart and blood vessel conditions. These include problems like heart attacks, stroke, and artery blockages. CVD is often caused by things like high blood pressure, high cholesterol, smoking, and being overweight. It's a major cause of illness and death worldwide, but many cases can be prevented by living a healthy lifestyle, like eating well, staying active, and not smoking. Taking care of these things can lower your chances of getting heart disease.
+              </p>
+              <div class="text-center">
+                <a href="https://www.who.int/health-topics/cardiovascular-diseases#tab=tab_1" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8 d-flex align-items-stretch">
+            <div class="icon-boxes d-flex flex-column justify-content-center">
+              <div class="row">
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <h4>How about the level of awareness among the public toward cardiovascular disease?</h4>
+                    <p>These days,
+                      there is a decline in public awareness of this disease’s dangers, and to make
+                      matters worse, some people are even unaware that it even exists.</p>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="fa-solid fa-circle-question"></i>
+                    <h4>Why we need to give attention to cardiovascular disease?</h4>
+                    <p>It's important to pay attention to cardiovascular disease (CVD) because it's a leading cause of illness and death worldwide and we can have serious consequences for health and quality of life. </p>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="fa-solid fa-thumbs-up"></i>
+                    <h4>What can we do to prevent cardiovascular disease?</h4>
+                    <p>Preventing cardiovascular disease (CVD) involves adopting a healthy lifestyle. This means eating a balanced diet, staying physically active, not smoking, and limiting alcohol intake.</p>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End .content-->
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container-fluid">
+        <div class="section-title">
+          <h2>About</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch position-relative">
+            <a href="https://www.youtube.com/watch?v=qJq5hA4pnOk&pp=ygUWY2FyZGlvdmFzY3VsYXIgZGlzZWFzZQ%3D%3D" class="glightbox play-btn mb-4"></a>
+          </div>
+
+          <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
+            <h3>Hello and welcome to CardioInsight!</h3>
+            <p>CardioInsight is where we're pioneering a new frontier in understanding and combating cardiovascular disease (CVD). Our commitment extends beyond research to actively raising public awareness through intuitive data visualization. Explore with us as we revolutionize cardiovascular health, empowering individuals with actionable insights and paving the way for a healthier future. Here , you can explore about our services that we provide: </p>
+
+            <div class="icon-box">
+              <div class="icon"><i class="fa-solid fa-gauge-simple-high"></i></div>
+              <h4 class="title"><a href="">Interactive Dashboard</a></h4>
+              <p class="description">CardioInsight provide an interactive dashboard where user can explore more about the cardiovascular disease in graphical ways.</p>
+            </div>
+
+            <div class="icon-box">
+              <div class="icon"><i class="fa-solid fa-circle-info"></i></div>
+              <h4 class="title"><a href="">Lot Information About Cardiovascular Disease</a></h4>
+              <p class="description">There are lots of information about cardiovascular disease where user can explore like types and factors of CVD. </p>
+            </div>
+
+            <div class="icon-box">
+              <div class="icon"><i class="fa-solid fa-newspaper"></i></div>
+              <h4 class="title"><a href="">Latest News</a></h4>
+              <p class="description">Our website offers up-to-date news related to cardiovascular disease, providing users with the latest updates and insights to stay informed about CVD developments.</p>
+            </div><br>
+            <p>Join us on this thrilling journey as we explore the transformative potential of data visualization in promoting healthier living. Together, we'll delve into the realm of cardiovascular disease, unraveling its complexities one chart and infographic at a time.</p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts">
+      <div class="container">
+        <div class="section-title">
+          <h2>Cardiovascular Disease Stats</h2>
+        </div>
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box">
+              <i class="fa-solid fa-house-medical-flag"></i>
+              <span data-purecounter-start="0" data-purecounter-end="17.9" data-purecounter-duration="1" class="purecounter" data-purecounter-step="0.1"></span>
+              <p>million deaths per year</p>
+          </div>
+          
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+            <div class="count-box">
+              <i class="fa-solid fa-person"></i>
+              <span data-purecounter-start="0" data-purecounter-end="110" data-purecounter-duration="1" class="purecounter"></span>
+              <p>million male patient per year</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+            <div class="count-box">
+              <i class="fa-solid fa-person-dress"></i>
+              <span data-purecounter-start="0" data-purecounter-end="80" data-purecounter-duration="1" class="purecounter"></span>
+              <p>million female patient per year</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+            <div class="count-box">
+              <i class="fa-solid fa-percent"></i>
+              <span data-purecounter-start="0" data-purecounter-end="90" data-purecounter-duration="1" class="purecounter"></span>
+              <p>percent chance surviving CVD.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Counts Section -->
+
+    <!-- ======= Doctors Section ======= -->
+    <section id="doctors" class="doctors">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>News</h2>
+          <p>Stay up-to-date with the latest developments, breakthroughs, and insights in cardiovascular health and wellness.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="assets/img/doctors/news-1.jpeg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Deaths From Cardiovascular Disease Surged 60% Globally Over The Last 30 Years</h4>
+                <span> by World Heart Federation</span>
+                <p><a href="https://world-heart-federation.org/news/deaths-from-cardiovascular-disease-surged-60-globally-over-the-last-30-years-report/">Click here to read.</a></p>
+               
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4 mt-lg-0">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="assets/img/doctors/news-2.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>New heart syndrome identifies link among obesity, diabetes and kidney disease.</h4>
+                <span> by NBC News</span>
+                
+                  <p><a href="https://www.nbcnews.com/health/heart-health/new-heart-diabetes-metabolic-syndrome-rcna119224">Click here to read.</a></p>
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="assets/img/doctors/news-3.jpeg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Intermittent fasting linked to higher risk of cardiovascular death, research suggests.</h4>
+                <span> by NBC News</span>
+                <p><a href="https://www.nbcnews.com/health/heart-health/intermittent-fasting-risk-cardiovascular-death-rcna143853">Click here to read.</a></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="assets/img/doctors/news-4.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>The Heart Foundation Of Malaysia Raises Awareness Of CVD Among Malaysian Women</h4>
+                <span> by World Heart Federation</span>
+                <p><a href="https://world-heart-federation.org/news/the-heart-foundation-of-malaysia-raises-awareness-of-cvd-among-malaysian-women/">Click here to read.</a></p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Doctors Section -->
+
+    <!-- ======= Appointment Section ======= -->
+    <section id="appointment" class="appointment section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Dashboard</h2>
+          <p>Explore our interactive Power BI visualizations to gain valuable insights into cardiovascular disease. Analyze data, uncover trends, and make informed decisions to improve cardiovascular health. Thank you for visiting!</p><br><br>
+          <iframe title="fyp test" width="1170" height="720" src="https://app.powerbi.com/view?r=eyJrIjoiNjY5OTFhZjQtMTAwMi00NjgxLWJhMzAtNTRiN2YxNTcxYTY5IiwidCI6ImNkY2JiMGUyLTlmZWEtNGY1NC04NjcwLTY3MjcwNzc5N2FkYSIsImMiOjEwfQ%3D%3D" frameborder="0" allowFullScreen="true"></iframe>
+        </div>
+
+        
+
+      </div>
+    </section><!-- End Appointment Section -->
+
+    <!-- ======= Departments Section ======= -->
+    <section id="departments" class="departments">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Cardiovascular Disease Types</h2>
+          <p>Dive into detailed insights on various types of cardiovascular diseases. Gain a better understanding of the symptoms, causes, and treatments specific to each condition, empowering yourself with knowledge to safeguard your heart health</p>
+        </div>
+
+        <div class="row gy-4">
+          <div class="col-lg-3">
+            <ul class="nav nav-tabs flex-column">
+              <li class="nav-item">
+                <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">Coronary Artery Disease (CAD)</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-2">Heart Failure</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-3">Stroke</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-4">Peripheral Artery Disease (PAD)</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-5">Atrial Fibrillation (AFib)</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-9">
+            <div class="tab-content">
+              <div class="tab-pane active show" id="tab-1">
+                <div class="row gy-4">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Coronary Artery Disease (CAD)</h3>
+                    <p class="fst-italic">Death Rate:  Approximately 610,000 deaths annually (Centre for Disease Control & Prevention).</p>
+                    <p>Coronary artery disease (CAD) develops when the blood vessels that deliver oxygen-rich blood to the heart muscle become narrowed or blocked, often due to the accumulation of plaque. This condition can result in symptoms such as chest pain (angina), heart attacks, and various other complications, highlighting the critical need for proactive measures to manage and prevent its progression.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="assets/img/type-1.png" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-2">
+                <div class="row gy-4">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Heart Failure</h3>
+                    <p class="fst-italic">Death Rate: About 35% will survive for 10 years (Medical News Today).</p>
+                    <p>
+                      Heart failure occurs when the heart muscle becomes weakened or stiffened, hindering its ability to effectively pump blood throughout the body. This can manifest in symptoms like shortness of breath, fatigue, and swelling in the legs and ankles, necessitating prompt medical intervention and lifestyle adjustments to manage the condition effectively.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="assets/img/type-2.jpg" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-3">
+                <div class="row gy-4">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Stroke</h3>
+                    <p class="fst-italic">Death Rate: Annually, 15 million people worldwide suffer a stroke. Of these, 5 million die and another 5 million are left permanently disabled (World Health Organization).</p>
+                    <p>A stroke occurs when the blood supply to part of the brain is interrupted or reduced, depriving brain tissue of oxygen and nutrients. This can cause brain damage and lead to symptoms such as sudden numbness or weakness in the face, arm, or leg, confusion, trouble speaking or understanding speech, and difficulty walking.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="assets/img/type-3.jpg" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-4">
+                <div class="row gy-4">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Peripheral Artery Disease (PAD)</h3>
+                    <p class="fst-italic">Death Rate: PAD accounted for 0.13% of total deaths (0.074–0.23%) globally (National Institute of Health).</p>
+                    <p>PAD is a condition in which the blood vessels outside of the heart, usually in the legs, become narrowed or blocked, restricting blood flow. This can result in symptoms such as leg pain or cramping during activity (claudication), numbness or weakness in the legs, and slow-healing wounds or ulcers on the feet.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="assets/img/type-4.png" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-5">
+                <div class="row gy-4">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Atrial Fibrillation (AFib)</h3>
+                    <p class="fst-italic">Death Rate: The condition contributes to about 158,000 deaths each year (National Institute of Health).</p>
+                    <p>AFib is a type of irregular heartbeat (arrhythmia) characterized by rapid, chaotic electrical signals in the heart's upper chambers (atria). This can lead to symptoms such as palpitations, fatigue, dizziness, and shortness of breath, and increases the risk of stroke.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="assets/img/type-5.jpg" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Departments Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Cardiovascular Disease Factors</h2>
+          <p>Explore key factors influencing cardiovascular health and disease risk. Learn about lifestyle habits, genetics, and environmental influences affecting your heart health. Empower yourself with knowledge to make heart-healthy choices</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="icon-box">
+              <div class="icon"><i class="fa-solid fa-smoking"></i></div>
+              <h4><a href="">Smoking/Tobacco use</a></h4>
+              <p>Smoking damages the blood vessels, reduces oxygen in the blood, and increases the buildup of plaque in the arteries. It is a major risk factor for heart disease, stroke, and other cardiovascular conditions.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+            <div class="icon-box">
+              <div class="icon"><i class="fas fa-pills"></i></div>
+              <h4><a href="">High Blood Pressure</a></h4>
+              <p>High blood pressure, or hypertension, occurs when the force of blood against the artery walls is consistently too high. This can damage arteries and increase the risk of heart disease, stroke, and other complications.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="fa-solid fa-burger"></i></i></div>
+              <h4><a href="">Unhealthy Diet</a></h4>
+              <p>A diet high in saturated and trans fats, cholesterol, sodium, and sugar increases the risk of developing high blood pressure, high cholesterol, and obesity, all of which are major risk factors for cardiovascular disease.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="icon-box">
+              <div class="icon"><i class="fa-solid fa-dumbbell"></i></i></div>
+              <h4><a href="">Physical Inactivity</a></h4>
+              <p>Lack of regular physical activity is associated with an increased risk of obesity, high blood pressure, high cholesterol, and diabetes. Engaging in regular exercise can help lower these risk factors and improve heart health.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="icon-box">
+              <div class="icon"><i class="fa-solid fa-circle-up"></i></i></div>
+              <h4><a href="">High Cholesterol Levels</a></h4>
+              <p>High cholesterol levels, particularly high levels of LDL ("bad") cholesterol, can lead to the buildup of plaque in the arteries, narrowing them and restricting blood flow. This increases the risk of heart disease and stroke.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="icon-box">
+              <div class="icon"><i class="fa-solid fa-people-roof"></i></div>
+              <h4><a href="">Family History and Genetics</a></h4>
+              <p>A family history of cardiovascular disease, as well as genetic factors, can increase an individual's risk of developing heart disease. These factors may include genetic conditions such as familial hypercholesterolemia or inherited heart defects.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Feel free to contact us!</p>
+        </div>
+      </div>
+
+
+      <div class="container">
+        <div class="row mt-5">
+
+          <div class="col-lg-4">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>University of MARA Technology Perlis Branch , 02500 Arau , Perlis</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>faizshaari01@gmail.com
+                </p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p>+6019-4311743</p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-8 mt-5 mt-lg-0">
+
+            <form action="#" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+            <div class="loading">Loading...</div>
+            <div class="success-message">Message sent & we will reach you as soon as possible. Thank you for contacting us!</div>
+            <div class="error-message">There was an error sending your message. Please try again later.</div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container d-md-flex py-4">
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy; Copyright <strong><span>CardioInsight</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/ -->
+          Designed by FaizShaari
+        </div>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
